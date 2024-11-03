@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-course, .toppings {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+h2, h3 {
+    color: #333;
+    text-align: center;
+    margin: 0 0 10px;
+}
+
+
+.topping-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.topping {
+    flex: 1 1 45%;
+    display: flex;
+    align-items: center;
+}
+
+.fading-line {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #9e9e9e, transparent);
+    margin: 10px 0 20px;
+}
+
+.pizza-card {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    height: 100%; /* Ensures the card takes full height of the parent */
+    width: 300px;
+}
+
+.pizza-small {
+    width: 100px;
+    height: auto;
+}
+
+.pizza-medium {
+    width: 100px;
+    height: auto;
+}
+
+.pizza-large {
+    width: 100px;
+    height: auto;
+}
+
+mat-card-actions {
+    display: flex; /* Use Flexbox for horizontal alignment */
+    justify-content: space-between; /* Space between buttons */
+    flex-grow: 1; /* Allow the actions area to take up remaining space */
+}
+
+.button-container {
+    display: flex;
+    flex-grow: 1; /* Allow the button container to fill the space */
+    justify-content: space-between; /* Space between buttons */
+    align-items: stretch; /* Make buttons stretch to the same height */
+    margin-bottom: 5px;
+}
+
+.example-header-image {
+    background-image: url('../assets/images/pizza.png');
+    background-size: cover;
+}
+
+.btn-group{
+    margin: 5px;
+}
+
+.pizza-box-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to the next line if space is limited */
+    gap: 5px; /* Space between boxes */
+    text-align: justify;
+}
+
+.card-content{
+    display: -webkit-box;          /* Enables flexbox layout */
+    -webkit-box-orient: vertical; /* Specifies the orientation of the box */
+    height: 200px;                /* Set a fixed height */
+    overflow: hidden;             /* Hide overflow */
+    text-overflow: ellipsis;      /* Display ellipsis (...) */
+}
+
+.offer-card{
+    width:100%;
+    margin: 5px;
+}
+

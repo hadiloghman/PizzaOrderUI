@@ -1,0 +1,27 @@
+<h2 mat-dialog-title>Select Toppings</h2>
+<h4>Veg Options</h4>
+<div class="fading-line"></div>
+
+<mat-dialog-content>
+    <mat-selection-list [(ngModel)]="toppingsSelectedVeg">
+        @for (topping of toppingsVeg ; track topping) {
+        <mat-list-option value={{topping.name}}>{{topping.name}} $({{topping.price.toFixed(2)}})</mat-list-option>
+        }
+    </mat-selection-list>
+</mat-dialog-content>
+
+<h4>Non Veg Options</h4>
+<div class="fading-line"></div>
+<mat-dialog-content>
+    <mat-selection-list [(ngModel)]="toppingsSelectedNonVeg">
+        @for (toppingNonVeg of toppingsNonVeg; track toppingNonVeg) {
+        <mat-list-option value={{toppingNonVeg.name}}>{{toppingNonVeg.name}}
+            $({{toppingNonVeg.price.toFixed(2)}})</mat-list-option>
+        }
+    </mat-selection-list>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button type="button" (click)="cancelClick()" class="btn btn-danger btn-group-dialog">Close</button>
+    <button type="button" (click)="okClick()" class="btn btn-success btn-group-dialog">OK</button>
+</mat-dialog-actions>
